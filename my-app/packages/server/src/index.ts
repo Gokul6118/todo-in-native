@@ -4,7 +4,7 @@ import { serve } from "@hono/node-server";
 import { cors } from "hono/cors";
 import { z } from "zod";
 
-import { auth } from "./../auth";
+import { auth } from "./../auth.js";
 
 import {
   describeRoute,
@@ -146,6 +146,7 @@ app.post(
     if (!result.success) {
       return c.json(result.error, 400);
     }
+    return;
   }),
 
   async (c) => {
@@ -245,6 +246,7 @@ app.patch(
     if (!result.success) {
       return c.json(result.error, 400);
     }
+    return;
   }),
 
   async (c) => {

@@ -1,7 +1,7 @@
 import pkg from "pg";
 import { drizzle } from "drizzle-orm/node-postgres";
-import { todos } from "./schema";
-import {user,session,account} from "./loginschema";
+import { todos } from "./schema.js";
+import {user,session,account} from "./loginschema.js";
 const { Pool } = pkg;
 import "dotenv/config";
 

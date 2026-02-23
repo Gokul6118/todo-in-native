@@ -1,5 +1,5 @@
 import { pgTable, serial, varchar, text, timestamp,integer, } from "drizzle-orm/pg-core";
-import {user} from "./loginschema";
+import {user} from "./loginschema.js";
 
 
 

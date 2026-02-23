@@ -8,7 +8,7 @@ import { expo } from "@better-auth/expo";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 
-import { getDb, user, session, account } from "./../db/src";
+import { getDb, user, session, account } from "./../db/src/index.js";
 
 
 const db = getDb();
