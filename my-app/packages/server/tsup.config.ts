@@ -11,12 +11,11 @@ export default defineConfig({
   splitting: false,
   bundle: true,
 
-  // 👇 BUNDLE internal packages
-  noExternal: [
+  // 👇 DO NOT bundle workspace packages
+  external: [
     "@repo/db",
     "@repo/schemas",
-    "@repo/store"
+    "@repo/store",
+    "pg"
   ],
-
-  external: ["pg"]
 });
