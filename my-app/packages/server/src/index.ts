@@ -17,11 +17,19 @@ import { Scalar } from "@scalar/hono-api-reference";
 import { getDb, todos, user } from "@repo/db";
 import { eq, sql, and } from "drizzle-orm";
 import {handle} from "hono/vercel"
+
 import { todoFormSchema, patchTodoSchema } from "@repo/schemas";
 
 /* ================= DB ================= */
 
-const db = getDb();
+let db;
+try {
+  db = getDb();
+  console.log('Database connected successfully');
+} catch (error) {
+  console.error('Database connection failed:', error);
+  throw new Error('Database connection failed: ' + error.message);
+}
 
 /* ================= TYPES ================= */
 
