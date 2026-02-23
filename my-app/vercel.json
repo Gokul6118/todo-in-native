@@ -1,9 +1,4 @@
 {
   "framework": null,
-  "buildCommand": "pnpm build server",
-  "functions": {
-    "packages/server/dist/index.js": {
-      "runtime": "nodejs18.x"
-    }
-  }
+  "buildCommand": "pnpm build server"
 }
