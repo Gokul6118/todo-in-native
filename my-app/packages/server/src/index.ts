@@ -16,7 +16,7 @@ import { Scalar } from "@scalar/hono-api-reference";
 
 import { getDb, todos, user } from "@repo/db";
 import { eq, sql, and } from "drizzle-orm";
-
+import {handle} from "hono/vercel"
 import { todoFormSchema, patchTodoSchema } from "@repo/schemas";
 
 /* ================= DB ================= */
@@ -336,17 +336,6 @@ app.get(
   })
 );
 
-/* ================= SERVER ================= */
 
-serve(
-  {
-    fetch: app.fetch,
-    port: 3000,
-    hostname: "0.0.0.0",
-  },
-  () => {
-    console.log(
-      "🚀 Server running on http://localhost:3000"
-    );
-  }
-);
+
+export default handle(app);

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "pnpm build --filter=@repo/server",
+  "buildCommand": "pnpm --filter @repo/server build",
   "outputDirectory": "packages/server/dist",
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/index.js" },

@@ -13,7 +13,7 @@ export default defineConfig({
   bundle: true,
 
   // 🔥 THIS IS THE FIX
-  noExternal: ['@repo/db'],
+  noExternal: ['@repo/db','@repo/schemas','@repo/store','better-auth','@better-auth/expo','better-auth/adapters/drizzle'],
 
   // Native deps only
   external: ['pg'],
