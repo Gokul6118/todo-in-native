@@ -12,9 +12,11 @@ export default defineConfig({
   splitting: false,
   bundle: true,
 
-  // 🔥 THIS IS THE FIX
-  noExternal: ['@repo/db','@repo/schemas','@repo/store','better-auth','@better-auth/expo','better-auth/adapters/drizzle'],
-
-  // Native deps only
-  external: ['pg'],
+  // 👇 DO NOT BUNDLE workspace packages
+  external: [
+    '@repo/db',
+    '@repo/schemas',
+    '@repo/store',
+    'pg'
+  ],
 })
