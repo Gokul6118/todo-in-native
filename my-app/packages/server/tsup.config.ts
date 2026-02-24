@@ -2,8 +2,11 @@ import { defineConfig } from "tsup";
 
 export default defineConfig({
   entry: ["src/index.ts"],
-  format: ["esm"],
+
+  format: ["esm"],       
   target: "node20",
+
+  platform: "node",     // 🔴 THIS IS IMPORTANT
 
   outDir: "dist",
   clean: true,
@@ -11,5 +14,5 @@ export default defineConfig({
   splitting: false,
   bundle: true,
 
-  external: ["pg"] // only real external deps
+  external: ["pg"],
 });

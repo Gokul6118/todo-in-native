@@ -17,7 +17,6 @@ import { Scalar } from "@scalar/hono-api-reference";
 import { getDb, todos, user } from "@repo/db";
 import { eq, sql, and } from "drizzle-orm";
 import {handle} from "hono/vercel"
-
 import { todoFormSchema, patchTodoSchema } from "@repo/schemas";
 
 /* ================= DB ================= */
