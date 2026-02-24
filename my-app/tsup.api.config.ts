@@ -10,5 +10,4 @@ export default defineConfig({
   clean: true,
 
 
-    external: ["@repo/db"],
 });

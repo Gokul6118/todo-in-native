@@ -9,9 +9,11 @@
   ],
 
   "scripts": {
+    "build:db": "pnpm --filter @repo/db build",
     "build:server": "pnpm --filter @repo/server build",
     "build:api": "tsup --config tsup.api.config.ts",
-    "build": "pnpm run build:server && pnpm run build:api",
+
+    "build": "pnpm run build:db && pnpm run build:server && pnpm run build:api",
     "dev": "turbo run dev",
     "start": "turbo run start",
     "lint": "turbo lint",
