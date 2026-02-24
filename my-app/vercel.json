@@ -1,9 +1,0 @@
-{
-  "framework": null,
-  "buildCommand": "pnpm run build",
-  "functions": {
-    "packages/api/dist/**/*.js": {
-      "runtime": "nodejs20.x"
-    }
-  }
-}
