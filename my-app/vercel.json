@@ -1,12 +1,5 @@
 {
   "framework": null,
-  "buildCommand": "pnpm run build:server",
-  "outputDirectory": ".",
-
-  "functions": {
-    "api/**/*.ts": {
-      "runtime": "nodejs20.x",
-      "esModule": true
-    }
-  }
+  "buildCommand": "pnpm run build:server && pnpm run build:api",
+  "outputDirectory": "."
 }
